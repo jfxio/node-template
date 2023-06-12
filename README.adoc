@@ -1,0 +1,10 @@
+= Skeleton Typescript Project
+
+* `git init` or `clone`
+*  `echo 20.1 > .nvmrc && nvm use 20.1`
+.gitignore::
+    ``
+    /node_modules
+    ``
+* `npm install --save-dev typescript`
+* `npx tsc --init`
