@@ -1,5 +1,14 @@
 {
+  "name": "node-template",
+  "version": "1.0.0-alpha.1",
+  "type": "module",
+  "description": "A Typescript/node.js project template",
+  "scripts": {
+    "build": "rm -rf build && npx tsc",
+    "main": "node build/main.js"
+  },
   "devDependencies": {
+    "@types/node": "^20.3.0",
     "typescript": "^5.1.3"
   }
 }

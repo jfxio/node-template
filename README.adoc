@@ -1,10 +1,47 @@
 = Skeleton Typescript Project
+:source-language: bash
 
-* `git init` or `clone`
-*  `echo 20.1 > .nvmrc && nvm use 20.1`
-.gitignore::
-    ``
-    /node_modules
-    ``
-* `npm install --save-dev typescript`
-* `npx tsc --init`
+* {empty}
++
+----
+git init` or `clone`
+----
+
+* {empty}
++
+----
+`echo 20.1 > .nvmrc && nvm use 20.1`
+----
+
+* `.gitignore`
++
+----
+/node_modules
+----
+
+* {empty}
++
+----
+npm install --save-dev typescript
+npx tsc --init
+----
+
+* `tsconfig.json`
++
+----
+"target": "es2022",
+"lib": "es2023",
+
+"module": "es2022",
+"moduleResolution": "node",
+
+"sourceMap": true,
+"outDir": "/build",
+
+"esModuleInterop": true,
+"forceConsistentCasingInFilenames": true,
+
+"strict": true,
+
+"skipLibCheck": true,
+----
