@@ -28,7 +28,9 @@ npx tsc --init
 
 * `tsconfig.json`
 +
+[source,json]
 ----
+{
 "target": "es2022",
 "lib": "es2023",
 
@@ -44,4 +46,42 @@ npx tsc --init
 "strict": true,
 
 "skipLibCheck": true,
+}
+----
+
+* {empty}
++
+----
+ npm i @typescript-eslint/eslint-plugin@rc-v6 @typescript-eslint/parser@rc-v6 --save-dev
+----
+
+* `.eslintignore`
++
+----
+/build
+----
+
+* `.eslintrc.cjs`
++
+[source,javascript]
+----
+/* eslint-env node */
+module.exports = {
+    extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
+    ],
+    env: {
+        es2022: true,
+        node: true,
+    },
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        project: true,
+        // tsconfigRootDir: __dirname,
+    },
+    plugins: ['@typescript-eslint'],
+    root: true,
+}
 ----
