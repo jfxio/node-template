@@ -85,3 +85,9 @@ module.exports = {
     root: true,
 }
 ----
+
+* {empty}
++
+----
+npm install --save-dev --save-exact prettier
+----
