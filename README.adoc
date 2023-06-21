@@ -1,93 +1,27 @@
-= Skeleton Typescript Project
+= Typescript Node.js Template
 :source-language: bash
 
-* {empty}
-+
+An example https://www.typescriptlang.org/[Typescript] / https://nodejs.org/en[Node.js] project that uses https://eslint.org/[eslint] for linting, https://prettier.io/[Prettier] for formatting, and https://jestjs.io/[Jest] for testing. The Typescript produces ESM modules. See also https://typestrong.org/ts-node/[ts-node] and https://kulshekhar.github.io/ts-jest/[ts-jest].
+
+== Install Node.js
+These steps aren't necessary, but show how the package.json was created.
 ----
-git init` or `clone`
+echo 20.1 > .nvmrc && nvm use 20.1
+npm install --save-dev typescript ts-node @types/node
+npx tsc --init
+npm install --save-dev @typescript-eslint/eslint-plugin@rc-v6 @typescript-eslint/parser@rc-v6 eslint
+npm install --save-dev --save-exact prettier
+npm install --save-dev jest @types/jest ts-jest
 ----
 
-* {empty}
-+
-----
-`echo 20.1 > .nvmrc && nvm use 20.1`
-----
+== Configuration
+Reveiew these settings.
 
 * `.gitignore`
-+
-----
-/node_modules
-----
-
-* {empty}
-+
-----
-npm install --save-dev typescript
-npx tsc --init
-----
-
+* `package.json`
 * `tsconfig.json`
-+
-[source,json]
-----
-{
-"target": "es2022",
-"lib": "es2023",
-
-"module": "es2022",
-"moduleResolution": "node",
-
-"sourceMap": true,
-"outDir": "/build",
-
-"esModuleInterop": true,
-"forceConsistentCasingInFilenames": true,
-
-"strict": true,
-
-"skipLibCheck": true,
-}
-----
-
-* {empty}
-+
-----
- npm i @typescript-eslint/eslint-plugin@rc-v6 @typescript-eslint/parser@rc-v6 --save-dev
-----
-
 * `.eslintignore`
-+
-----
-/build
-----
-
 * `.eslintrc.cjs`
-+
-[source,javascript]
-----
-/* eslint-env node */
-module.exports = {
-    extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/strict-type-checked',
-        'plugin:@typescript-eslint/stylistic-type-checked',
-    ],
-    env: {
-        es2022: true,
-        node: true,
-    },
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-        project: true,
-        // tsconfigRootDir: __dirname,
-    },
-    plugins: ['@typescript-eslint'],
-    root: true,
-}
-----
-
-* {empty}
-+
-----
-npm install --save-dev --save-exact prettier
-----
+* `.prettierignore`
+* `.prettierrc.yaml`
+* `jest.config.ts`
