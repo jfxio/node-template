@@ -1,27 +1,31 @@
 = Typescript Node.js Template
 :source-language: bash
 
-An example https://www.typescriptlang.org/[Typescript] / https://nodejs.org/en[Node.js] project that uses https://eslint.org/[eslint] for linting, https://prettier.io/[Prettier] for formatting, and https://jestjs.io/[Jest] for testing. The Typescript produces ESM modules. See also https://typestrong.org/ts-node/[ts-node] and https://kulshekhar.github.io/ts-jest/[ts-jest].
+An example https://www.typescriptlang.org/[Typescript] / https://nodejs.org/en[Node.js]
+project that uses https://eslint.org/[eslint] for linting,
+https://prettier.io/[Prettier] for formatting, and
+https://https://jasmine.github.io//[Jasmine] for testing. The Typescript produces
+modules. See also https://tsx.is/[txs].
 
 == Install Node.js
 These steps aren't necessary, but show how the package.json was created.
 ----
-echo 20.1 > .nvmrc && nvm use 20.1
-npm install --save-dev typescript ts-node @types/node
+echo 22.12 > .nvmrc && nvm use 22.12
+npm install --save-dev typescript tsx @types/node globals
 npx tsc --init
-npm install --save-dev @typescript-eslint/eslint-plugin@rc-v6 @typescript-eslint/parser@rc-v6 eslint
+npm install --save-dev eslint @eslint/js typescript-eslint
 npm install --save-dev --save-exact prettier
-npm install --save-dev jest @types/jest ts-jest
+npm install --save-dev eslint-config-prettier @types/eslint-config-prettier
+npm install --save-dev jasmine @types/jasmine
 ----
 
 == Configuration
-Reveiew these settings.
+Review these settings.
 
 * `.gitignore`
 * `package.json`
 * `tsconfig.json`
-* `.eslintignore`
-* `.eslintrc.cjs`
+* `.eslint.config.js`
 * `.prettierignore`
 * `.prettierrc.yaml`
 * `jest.config.ts`

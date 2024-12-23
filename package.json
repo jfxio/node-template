@@ -1,6 +1,6 @@
 {
   "name": "node-template",
-  "version": "0.2.0-rc.1",
+  "version": "0.2.0",
   "description": "A Typescript/node.js project template",
   "license": "Unlicense",
   "engines": {
@@ -25,15 +25,15 @@
     "@types/eslint-config-prettier": "6.11.3",
     "@types/jasmine": "^5.1.5",
     "@types/node": "^22.10.2",
-    "eslint": "^9.17.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jasmine": "^4.2.2",
+    "eslint": "^9.17.0",
     "globals": "^15.13.0",
     "jasmine": "^5.5.0",
     "prettier": "3.4.2",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.18.1"
+    "typescript-eslint": "^8.18.1",
+    "typescript": "^5.7.2"
   },
   "dependencies": {
     "chalk": "^5.3.0"

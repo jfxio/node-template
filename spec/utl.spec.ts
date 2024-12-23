@@ -1,5 +1,5 @@
 import 'jasmine'
-import { reverse } from '../src/utl.js'
+import {reverse} from '../src/utl.js'
 
 describe('utl.reverse', () => {
   const cases = [
