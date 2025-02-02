@@ -10,13 +10,14 @@ modules. See also https://tsx.is/[txs].
 == Install Node.js
 These steps aren't necessary, but show how the package.json was created.
 ----
-echo 22.12 > .nvmrc && nvm use 22.12
+echo 22.13 > .nvmrc && nvm use 22.13
 npm install --save-dev typescript tsx @types/node globals
 npx tsc --init
-npm install --save-dev eslint @eslint/js typescript-eslint
+npm install --save-dev eslint @eslint/js typescript-eslint @ianvs/prettier-plugin-sort-imports
 npm install --save-dev --save-exact prettier
 npm install --save-dev eslint-config-prettier @types/eslint-config-prettier
-npm install --save-dev jasmine @types/jasmine
+npm install --save-dev jasmine @types/jasmine eslint-plugin-jasmine
+npm install --save-dev eslint-plugin-tsdoc
 ----
 
 == Configuration

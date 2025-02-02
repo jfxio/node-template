@@ -1,5 +1,5 @@
 import chalk from 'chalk'
-import {reverse, greet} from './utl.js'
+import {greet, reverse} from './utl.js'
 
 console.log(`Greet: ${greet('Joe')}`)
 console.log(`Reverse: ${reverse('one two three')}`)

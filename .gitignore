@@ -1,3 +1,16 @@
-/bin
-/coverage
-/node_modules
+# MacOS
+.DS_Store
+
+# ESLint cache
+.eslintcache
+
+# npm cache
+.npm
+
+bin
+coverage
+node_modules
+*.log
+
+# Typescript cache
+*.tsbuildinfo

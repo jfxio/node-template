@@ -4,12 +4,11 @@
 // true parser option means tsconfig.json controls what files
 // processed (or at least get parsed by TS).
 
-// import pluginJs from "@eslint/js";
 import esLint from '@eslint/js'
-import tsLint from 'typescript-eslint'
 import prettierLint from 'eslint-config-prettier'
 import jasmine from 'eslint-plugin-jasmine'
-// import globals from 'globals'
+import tsDoc from 'eslint-plugin-tsdoc'
+import tsLint from 'typescript-eslint'
 
 export default tsLint.config(
   {
@@ -17,9 +16,6 @@ export default tsLint.config(
   },
   {
     languageOptions: {
-      // globals: {
-      //   ...globals.jasmine,
-      // },
       parserOptions: {
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
@@ -27,12 +23,40 @@ export default tsLint.config(
     },
     plugins: {
       jasmine,
+      tsDoc,
     },
   },
   esLint.configs.recommended,
   jasmine.configs.recommended,
   tsLint.configs.strictTypeChecked,
   tsLint.configs.stylisticTypeChecked,
+  {
+    rules: {
+      // Rely on typescript to flag unused variables
+      '@typescript-eslint/no-unused-vars': 'off',
+      // Revert to recommended from strict
+      '@typescript-eslint/restrict-template-expressions': [
+        'error',
+        {
+          allow: [{name: ['Error', 'URL', 'URLSearchParams'], from: 'lib'}],
+          allowBoolean: true,
+          allowNullish: true,
+          allowNumber: true,
+          allowRegExp: true,
+        },
+      ],
+      // Allow infinte loops
+      '@typescript-eslint/no-unnecessary-condition': [
+        'error',
+        {
+          allowConstantLoopConditions: true,
+        },
+      ],
+      // Only warn about focus tests (should get removed before merge)
+      'jasmine/no-focused-tests': 'warn',
+      'tsDoc/syntax': 'warn',
+    },
+  },
 
   // Last to turn off any formatting lints
   prettierLint,
