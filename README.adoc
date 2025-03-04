@@ -28,5 +28,17 @@ Review these settings.
 * `tsconfig.json`
 * `.eslint.config.js`
 * `.prettierignore`
-* `.prettierrc.yaml`
-* `jest.config.ts`
+* `spec/support/jasmine.js`
+* `.vscode/*`
+* `.vscode/settings` `editor.rulers` should match `package.json` `prettier.printWidth`
+* `package.json` `license` should match contes of `LICENSE.adoc`
+
+== VSCode extensions
+* AsciiDoc _asciidoctor_
+* ESLint _Microsoft_
+* ?JSDocGenerator _Crystal Spider_
+* Prettier _Prettier_
+* Spell Right _Bartosz Antosik_
+
+
+

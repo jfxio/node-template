@@ -1,6 +1,6 @@
 {
   "name": "node-template",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A Typescript/node.js project template",
   "license": "Unlicense",
   "engines": {
@@ -26,7 +26,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@types/eslint-config-prettier": "6.11.3",
     "@types/jasmine": "^5.1.5",
-    "@types/node": "^22.13.0",
+    "@types/node": "^22.13.1",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jasmine": "^4.2.2",
@@ -36,7 +36,7 @@
     "prettier": "3.4.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.22.0"
+    "typescript-eslint": "^8.24.0"
   },
   "dependencies": {
     "chalk": "^5.4.1"
@@ -46,7 +46,7 @@
     "singleQuote": true,
     "trailingComma": "all",
     "bracketSpacing": false,
-    "printWidth": 120,
+    "printWidth": 100,
     "plugins": [
       "@ianvs/prettier-plugin-sort-imports"
     ],

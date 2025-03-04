@@ -1,0 +1,20 @@
+{
+  "typescript.format.enable": false,
+  "javascript.format.enable": false,
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "css.format.enable": false,
+  "less.format.enable": false,
+  "scss.format.enable": false,
+  "html.format.enable": false,
+  "json.format.enable": false,
+  "editor.formatOnType": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+  "emacs-mcx.useMetaPrefixMacCmd": false,
+  "editor.quickSuggestionsDelay": 500,
+  "spellright.language": ["en"],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext"],
+  "editor.rulers": [100]
+}
