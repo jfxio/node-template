@@ -1,11 +1,11 @@
 {
   "name": "node-template",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A Typescript/node.js project template",
   "license": "Unlicense",
   "engines": {
-    "node": "^22.13",
-    "npm": "^11.0"
+    "node": "^22.18",
+    "npm": "^11.5"
   },
   "type": "module",
   "bin": {
@@ -23,23 +23,23 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@types/eslint-config-prettier": "6.11.3",
-    "@types/jasmine": "^5.1.5",
-    "@types/node": "^22.13.1",
-    "eslint": "^9.19.0",
-    "eslint-config-prettier": "9.1.0",
+    "@types/jasmine": "^5.1.9",
+    "@types/node": "^24.3.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jasmine": "^4.2.2",
     "eslint-plugin-tsdoc": "^0.4.0",
-    "globals": "^15.14.0",
-    "jasmine": "^5.5.0",
-    "prettier": "3.4.2",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.3",
-    "typescript-eslint": "^8.24.0"
+    "globals": "^16.3.0",
+    "jasmine": "^5.10.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.42.0"
   },
   "dependencies": {
-    "chalk": "^5.4.1"
+    "chalk": "^5.6.0"
   },
   "prettier": {
     "semi": false,

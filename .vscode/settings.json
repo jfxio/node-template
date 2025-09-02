@@ -16,5 +16,6 @@
   "editor.quickSuggestionsDelay": 500,
   "spellright.language": ["en"],
   "spellright.documentTypes": ["markdown", "latex", "plaintext"],
-  "editor.rulers": [100]
+  "editor.rulers": [100],
+  "workbench.sideBar.location": "right"
 }
