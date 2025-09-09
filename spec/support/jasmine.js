@@ -1,7 +1,7 @@
 export default {
-  spec_dir: 'spec',
-  spec_files: ['**/*[sS]pec.ts'],
-  helpers: ['helpers/**/*.ts'],
+  spec_dir: 'bin/spec',
+  spec_files: ['**/*[sS]pec.js'],
+  helpers: ['helpers/**/*.js'],
   env: {
     stopSpecOnExpectationFailure: false,
     random: true,

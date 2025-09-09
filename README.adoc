@@ -24,7 +24,7 @@ npm install --save-dev eslint-plugin-tsdoc
 Review these settings.
 
 * `.gitignore`
-* `package.json`
+* `package.yaml`
 * `tsconfig.json`
 * `.eslint.config.js`
 * `.prettierignore`
