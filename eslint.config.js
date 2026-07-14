@@ -8,7 +8,7 @@
 
 import esLint from '@eslint/js'
 import {defineConfig} from 'eslint/config'
-// import prettierLint from 'eslint-config-prettier'
+import prettierLint from 'eslint-config-prettier/flat'
 // import jasmine from 'eslint-plugin-jasmine'
 // import tsDoc from 'eslint-plugin-tsdoc'
 import tsLint from 'typescript-eslint'
@@ -18,6 +18,7 @@ export default defineConfig({
   files: ['**/*.{js,ts}'],
   ignores: ['bin/**'],
   extends: [esLint.configs.recommended, tsLint.configs.recommended],
+  ...prettierLint,
 })
 //   {
 //     ignores: ['bin/**', 'eslint.config.js'],

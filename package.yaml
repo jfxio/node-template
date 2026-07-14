@@ -1,5 +1,5 @@
 name: node-template
-version: 0.5.0
+version: 0.6.0
 description: A Typescript/node.js project template
 license: Unlicense
 engines: {node: ^24.18, pnpm: ^11.12}
@@ -14,16 +14,19 @@ scripts:
   pretty: prettier . --check
   pretty-fix: prettier . --write
   pretest: tsc --build
-  test: NODE_OPTIONS=--enable-source-maps jasmine
+  test: vitest
   hello: tsx src/hello.ts
 devDependencies:
   '@eslint/js': ^10.0.1
   '@tsconfig/node24': ^24.0.4
   '@types/node': ^24.13.3
   eslint: ^10.7.0
+  eslint-config-prettier: ^10.1.8
+  prettier: ^3.9.5
   tsx: ^4.23.0
   typescript: ^6.0.3
   typescript-eslint: ^8.63.0
+  vitest: ^4.1.10
 dependencies:
   chalk: ^5.6.2
 prettier:
@@ -32,13 +35,3 @@ prettier:
   trailingComma: all
   bracketSpacing: false
   printWidth: 100
-  plugins:
-    - '@ianvs/prettier-plugin-sort-imports'
-  importOrder:
-    - <BUILTIN_MODULES>
-    - <THIRD_PARTY_MODULES>
-    - ^[.]
-  importOrderParserPlugins:
-    - typescript
-  importOrderTypeScriptVersion: 5.7.2
-  importOrderCaseSensitive: false
