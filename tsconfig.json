@@ -1,10 +1,10 @@
 {
-    "include": ["src"],
-    // "exclude": ["@types", "spec", "node_modules", "bin"],
-    "extends": "@tsconfig/node24",
-    "compilerOptions": {
-        "rootDir": "src",
-        "outDir": "bin",
-        "types": ["node"]
-    }
+  "include": ["src"],
+  // "exclude": ["@types", "spec", "node_modules", "bin"],
+  "extends": "@tsconfig/node24",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "bin",
+    "types": ["node"]
+  }
 }

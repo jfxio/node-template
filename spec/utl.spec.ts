@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import {describe, expect, test} from 'vitest'
 import {reverse} from '../src/utl.js'
 
 describe('utl.reverse', () => {

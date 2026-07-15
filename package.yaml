@@ -18,6 +18,7 @@ scripts:
   hello: tsx src/hello.ts
 devDependencies:
   '@eslint/js': ^10.0.1
+  '@ianvs/prettier-plugin-sort-imports': ^4.7.1
   '@tsconfig/node24': ^24.0.4
   '@types/node': ^24.13.3
   eslint: ^10.7.0
@@ -35,3 +36,13 @@ prettier:
   trailingComma: all
   bracketSpacing: false
   printWidth: 100
+  plugins:
+    - '@ianvs/prettier-plugin-sort-imports'
+  importOrder:
+    - <BUILTIN_MODULES>
+    - <THIRD_PARTY_MODULES>
+    - ^[.]
+  importOrderParserPlugins:
+    - typescript
+  importOrderTypeScriptVersion: 6.0.3
+  importOrderCaseSensitive: false
