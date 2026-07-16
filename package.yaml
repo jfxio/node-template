@@ -7,14 +7,15 @@ type: module
 bin:
   hello: bin/src/hello.js
 scripts:
+  prebuild: pnpm clean
   build: tsc --build
   clean: rm -rf bin
   lint: eslint
   lint-fix: eslint --fix
   pretty: prettier . --check
   pretty-fix: prettier . --write
-  pretest: tsc --build
-  test: vitest
+  pretest: pnpm build
+  test: vitest run
   hello: tsx src/hello.ts
 devDependencies:
   '@eslint/js': ^10.0.1

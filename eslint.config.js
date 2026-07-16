@@ -1,25 +1,27 @@
 // @ts-check
 
-// // Not @ts-check because we can't type eslint-plugin-jasmine
-// // at the momeent. We add it to "ingnores" here and removed it
-// // from "includes" in tsconfig.json. Also note the projectService
-// // true parser option means tsconfig.json controls what files
-// // processed (or at least get parsed by TS).
-
 import esLint from '@eslint/js'
 import prettierLint from 'eslint-config-prettier/flat'
 import {defineConfig} from 'eslint/config'
-// import jasmine from 'eslint-plugin-jasmine'
 // import tsDoc from 'eslint-plugin-tsdoc'
 import tsLint from 'typescript-eslint'
 
-// export default tsLint.config(
 export default defineConfig({
   files: ['**/*.{js,ts}'],
   ignores: ['bin/**'],
-  extends: [esLint.configs.recommended, tsLint.configs.recommended],
+  extends: [esLint.configs.recommended, tsLint.configs.strict, tsLint.configs.stylistic],
+
   ...prettierLint,
+
+  rules: {
+    // Rely on typescript to flag unused variables, but see
+    // https://typescript-eslint.io/rules/no-unused-vars for implementing the _ exclusion
+    '@typescript-eslint/no-unused-vars': 'off',
+  },
 })
+
+// 2026-07-15 The config below is from the last iteration in case we missed something.
+
 //   {
 //     ignores: ['bin/**', 'eslint.config.js'],
 //   },
