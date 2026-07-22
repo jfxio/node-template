@@ -1,41 +1,36 @@
 name: node-template
-version: 0.5.0
+version: 0.6.0
 description: A Typescript/node.js project template
 license: Unlicense
-engines:
-  node: ^22.18
-  pnpm: ^10.15
+engines: {node: ^24.18, pnpm: ^11.12}
 type: module
 bin:
   hello: bin/src/hello.js
 scripts:
+  prebuild: pnpm clean
   build: tsc --build
   clean: rm -rf bin
   lint: eslint
   lint-fix: eslint --fix
   pretty: prettier . --check
   pretty-fix: prettier . --write
-  pretest: tsc --build
-  test: NODE_OPTIONS=--enable-source-maps jasmine
+  pretest: pnpm build
+  test: vitest run
   hello: tsx src/hello.ts
 devDependencies:
-  '@eslint/js': ^9.17.0
-  '@ianvs/prettier-plugin-sort-imports': ^4.7.0
-  '@types/eslint-config-prettier': 6.11.3
-  '@types/jasmine': ^5.1.9
-  '@types/node': ^24.3.0
-  eslint: ^9.34.0
+  '@eslint/js': ^10.0.1
+  '@ianvs/prettier-plugin-sort-imports': ^4.7.1
+  '@tsconfig/node24': ^24.0.4
+  '@types/node': ^24.13.3
+  eslint: ^10.7.0
   eslint-config-prettier: ^10.1.8
-  eslint-plugin-jasmine: ^4.2.2
-  eslint-plugin-tsdoc: ^0.4.0
-  globals: ^16.3.0
-  jasmine: ^5.10.0
-  prettier: ^3.6.2
-  tsx: ^4.20.5
-  typescript: ^5.9.2
-  typescript-eslint: ^8.42.0
+  prettier: ^3.9.5
+  tsx: ^4.23.0
+  typescript: ^6.0.3
+  typescript-eslint: ^8.63.0
+  vitest: ^4.1.10
 dependencies:
-  chalk: ^5.6.0
+  chalk: ^5.6.2
 prettier:
   semi: false
   singleQuote: true
@@ -50,5 +45,5 @@ prettier:
     - ^[.]
   importOrderParserPlugins:
     - typescript
-  importOrderTypeScriptVersion: 5.7.2
+  importOrderTypeScriptVersion: 6.0.3
   importOrderCaseSensitive: false
