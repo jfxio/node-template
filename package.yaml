@@ -7,14 +7,12 @@ type: module
 bin:
   hello: bin/src/hello.js
 scripts:
-  prebuild: pnpm clean
-  build: tsc --build
+  build: rm -rf bin && tsc --build
   clean: rm -rf bin
   lint: eslint
   lint-fix: eslint --fix
   pretty: prettier . --check
   pretty-fix: prettier . --write
-  pretest: pnpm build
   test: vitest run
   hello: tsx src/hello.ts
 devDependencies:
